@@ -1,11 +1,14 @@
-<h1> Udpate <%= @task %> </h1>
+<h1> Udpate <%= @task.title %> </h1>
 
 <%= form_for @task do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title, placeholder: " 🏊 Wash the pool" %>
+  <%= f.text_field :title, placeholder: "🏊 Go to swim" %>
 
   <%= f.label :details %>
-  <%= f.text_field :details, placeholder: "Don't forget the brome" %>
+  <%= f.text_field :details, placeholder: "Don't forget your swimsuit" %>
+
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
 
   <%= f.submit %>
 <% end %>
